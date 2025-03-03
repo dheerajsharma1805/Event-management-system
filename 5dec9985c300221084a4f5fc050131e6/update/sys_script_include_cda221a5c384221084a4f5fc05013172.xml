@@ -81,6 +81,20 @@ TaskUtils.prototype = {
 		}
 	},
 
+	updateOverdueTasks: function() {
+        var taskGR = new GlideRecord('x_1605035_event_0_event_task');
+        taskGR.addQuery('due_date', '<', new GlideDateTime());
+        taskGR.query();
+
+        while (taskGR.next()) {
+            taskGR.setValue('status', 'cancelled');
+            taskGR.work_notes = 'Task marked as Cancelled due to overdue status.';
+            taskGR.update();
+        }
+
+        return 'Overdue tasks updated to Cancelled.';
+    },
+
     mapTaskFields: function(taskGR) {
         return {
             sysId: taskGR.getUniqueValue(),
@@ -100,14 +114,14 @@ TaskUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-02 19:55:21</sys_created_on>
         <sys_id>cda221a5c384221084a4f5fc05013172</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>TaskUtils</sys_name>
         <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
         <sys_update_name>sys_script_include_cda221a5c384221084a4f5fc05013172</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-03 14:52:37</sys_updated_on>
+        <sys_updated_on>2025-03-03 18:32:54</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>cda221a5c384221084a4f5fc05013172</id>
