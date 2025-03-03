@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var EventApp = angular.module('eventApp', []);
+
+EventApp.controller('EventController', function($scope) {
+    $scope.loading = true;
+    $scope.event = null;
+    $scope.tasks = [];
+    $scope.attendees = [];
+    $scope.vendors = [];
+    $scope.budget = null;
+    $scope.schedule = [];
+    $scope.feedback = [];
+
+    var eventId = '1933fd81c380221084a4f5fc05013109'; // Replace dynamically if needed
+	// var eventId = g_form.getUniqueValue();
+
+    var ga = new GlideAjax('x_1605035_event_0.EventDetailsUIPageUtils');
+    ga.addParam('sysparm_name', 'getEventDetails');
+    ga.addParam('event_id', eventId);
+
+    ga.getXMLAnswer(function(response) {
+        $scope.$apply(function() {
+            var data = JSON.parse(response);
+            $scope.event = data.event;
+            $scope.tasks = data.tasks;
+            $scope.attendees = data.attendees;
+            $scope.vendors = data.vendors;
+            $scope.budget = data.budget;
+            $scope.schedule = data.schedule;
+            $scope.feedback = data.feedback;
+            $scope.loading = false;
+        });
+    });
+});
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_1605035_event_0_ event_details_dashboard.do</endpoint>
+        <html><![CDATA[<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        h2, h3 {
+            color: #d1d1d1;
+            border-bottom: 2px solid #d1d1d1;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #444;
+            text-align: left;
+        }
+        th {
+            background-color: #3a3a3a;
+            color: #f1f1f1;
+        }
+        tr:hover {
+            background-color: #333;
+        }
+        .loading {
+            font-size: 18px;
+            color: gray;
+            font-style: italic;
+        }
+        .section {
+            background: #2a2a2a;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin: 8px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #d1d1d1;
+        }
+    </style>
+</head>
+<body ng-app="eventApp" ng-controller="EventController">
+
+    <h2>Event Details</h2>
+    <p class="loading" ng-if="loading">Loading event details...</p>
+
+    <div class="section" ng-if="event">
+        <p><span class="highlight">Name:</span> {{ event.name }}</p>
+        <p><span class="highlight">Date:</span> {{ event.date }}</p>
+        <p><span class="highlight">Location:</span> {{ event.location }}</p>
+        <p><span class="highlight">Status:</span> {{ event.status }}</p>
+    </div>
+
+    <div class="section" ng-if="tasks.length > 0">
+        <h3>Tasks</h3>
+        <table>
+            <tr><th>Task</th><th>Assigned To</th><th>Status</th></tr>
+            <tr ng-repeat="task in tasks">
+                <td>{{ task.name }}</td>
+                <td>{{ task.assigned_to }}</td>
+                <td>{{ task.status }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" ng-if="attendees.length > 0">
+        <h3>Attendees</h3>
+        <table>
+            <tr><th>Name</th><th>Email</th><th>Contact</th></tr>
+            <tr ng-repeat="attendee in attendees">
+                <td>{{ attendee.name }}</td>
+                <td>{{ attendee.email }}</td>
+                <td>{{ attendee.contact }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" ng-if="vendors.length > 0">
+        <h3>Vendors</h3>
+        <table>
+            <tr><th>Vendor</th><th>Service</th></tr>
+            <tr ng-repeat="vendor in vendors">
+                <td>{{ vendor.name }}</td>
+                <td>{{ vendor.service }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" ng-if="budget">
+        <h3>Budget</h3>
+        <p><span class="highlight">Total Amount:</span> {{ budget.total }}</p>
+        <p><span class="highlight">Amount Spent:</span> {{ budget.spent }}</p>
+        <p><span class="highlight">Remaining Amount:</span> {{ budget.remaining }}</p>
+    </div>
+
+    <div class="section" ng-if="schedule.length > 0">
+        <h3>Schedule</h3>
+        <table>
+            <tr><th>Activity</th><th>Time</th></tr>
+            <tr ng-repeat="item in schedule">
+                <td>{{ item.activity }}</td>
+                <td>{{ item.time }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" ng-if="feedback.length > 0">
+        <h3>Feedback</h3>
+        <table>
+            <tr><th>User</th><th>Rating</th><th>Comments</th></tr>
+            <tr ng-repeat="fb in feedback">
+                <td>{{ fb.user }}</td>
+                <td>{{ fb.rating }}</td>
+                <td>{{ fb.comment }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <p ng-if="!loading &amp;&amp; !event">Event not found.</p>
+
+</body>
+</html>
+]]></html>
+        <name> event_details_dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 17:27:56</sys_created_on>
+        <sys_id>e0e6c27dc3c8621084a4f5fc0501318e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name> event_details_dashboard</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_ui_page_e0e6c27dc3c8621084a4f5fc0501318e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 17:43:43</sys_updated_on>
+    </sys_ui_page>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e0e6c27dc3c8621084a4f5fc0501318e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 17:23:46</sys_created_on>
+        <sys_id>315ac2b1c30c621084a4f5fc050131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 17:23:46</sys_updated_on>
+        <table>sys_ui_page</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

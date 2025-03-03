@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1605035_event_0.EventUIPageUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>EventUIPageUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var EventUIPageUtils = Class.create();
+EventUIPageUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getUpcomingEvents: function() {
+        var eventList = [];
+        var eventGR = new GlideRecord('x_1605035_event_0_event_record'); 
+
+        eventGR.addQuery('event_date', '>=', gs.daysAgoStart(0));
+        eventGR.addQuery('status', '!=', 'Cancelled');
+        eventGR.orderBy('event_date');
+        eventGR.query();
+
+        while (eventGR.next()) {
+            eventList.push({
+                name: eventGR.getValue('event_name'),
+                date: eventGR.getValue('event_date'),
+                location: eventGR.getDisplayValue('location'),
+                status: eventGR.getValue('status'),
+				contact: eventGR.getValue('contact_person')
+            });
+        }
+
+        return JSON.stringify(eventList);
+    },
+
+    type: 'EventUIPageUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 17:05:31</sys_created_on>
+        <sys_id>fcc50e3dc3c8621084a4f5fc05013177</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EventUIPageUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_script_include_fcc50e3dc3c8621084a4f5fc05013177</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 17:05:31</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>fcc50e3dc3c8621084a4f5fc05013177</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 17:05:31</sys_created_on>
+        <sys_id>5a26c6bdc3c8621084a4f5fc05013165</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 17:05:31</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

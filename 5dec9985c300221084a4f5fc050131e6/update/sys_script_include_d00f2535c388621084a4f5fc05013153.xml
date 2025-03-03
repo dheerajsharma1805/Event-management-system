@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1605035_event_0.FeedbackUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FeedbackUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FeedbackUtils = Class.create();
+FeedbackUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    createFeedback: function() {
+        var feedbackID = this.getParameter('feedbackID');
+        var rating = this.getParameter('rating');
+        var comments = this.getParameter('comments');
+        var eventID = this.getParameter('eventID');
+        var attendeeID = this.getParameter('attendeeID');
+
+
+        var feedbackGR = new GlideRecord('x_1605035_event_0_feedback');
+        feedbackGR.addQuery('sys_id', feedbackID);
+        feedbackGR.query();
+        while (feedbackGR.next()) {
+            feedbackGR.setValue('rating', rating);
+            feedbackGR.setValue('comment', comments);
+            feedbackGR.setValue('event_id', eventID);
+            feedbackGR.setValue('attendee_id', attendeeID);
+            feedbackGR.update();
+        }
+        return JSON.stringify({
+			message: "success",
+			statusCode: 200
+		});
+    },
+
+    type: 'FeedbackUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 15:27:04</sys_created_on>
+        <sys_id>d00f2535c388621084a4f5fc05013153</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FeedbackUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_script_include_d00f2535c388621084a4f5fc05013153</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 15:27:04</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d00f2535c388621084a4f5fc05013153</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 15:27:04</sys_created_on>
+        <sys_id>94afa1f1c388621084a4f5fc0501313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 15:27:04</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
