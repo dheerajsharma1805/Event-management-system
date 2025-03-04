@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Rohit Instance">8ae02f02c384e21084a4f5fc050131a4</basic_auth_profile>
+        <basic_auth_user/>
+        <description/>
+        <name>Event Scheduled REST</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://dev267515.service-now.com/api/x_1610434_event_0/event_management_api</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 18:22:17</sys_created_on>
+        <sys_id>47175746c344e21084a4f5fc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Scheduled REST</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_rest_message_47175746c344e21084a4f5fc05013191</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 18:22:17</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

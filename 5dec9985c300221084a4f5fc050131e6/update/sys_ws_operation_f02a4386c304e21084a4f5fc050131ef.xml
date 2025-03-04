@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Event</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var requestBody = request.body.data;
+    var eventName = requestBody.eventName;
+    var eventDate = requestBody.eventDate;
+    var location = requestBody.location;
+    var contactPerson = requestBody.contactPerson;
+	var contactNumber = requestBody.contactNumber;
+
+    if (!eventName || !eventDate || !location || !contactPerson) {
+        response.setStatus(400);
+        return response.setBody({
+            error: "Missing required fields"
+        });
+    }
+
+    var eventRecordGR = new GlideRecordSecure('x_1605035_event_0_event_record');
+    eventRecordGR.initialize();
+    eventRecordGR.setValue('event_name', eventName);
+    eventRecordGR.setValue('event_date', eventDate);
+    eventRecordGR.setValue('location', location);
+    eventRecordGR.setValue('contact_person', contactPerson);
+	eventRecordGR.setValue('contact_number', contactNumber);
+    eventRecordGR.insert();
+
+    response.setStatus(201);
+    return response.setBody({
+        message: "Event created successfully",
+        eventId: eventRecordGR.getUniqueValue()
+    });
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1605035_event_0/event_management_api/event</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/event</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 17:06:38</sys_created_on>
+        <sys_id>f02a4386c304e21084a4f5fc050131ef</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create Event</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_ws_operation_f02a4386c304e21084a4f5fc050131ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 17:20:02</sys_updated_on>
+        <web_service_definition display_value="Event Management API">b0a9c746c304e21084a4f5fc05013199</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f02a4386c304e21084a4f5fc050131ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 17:06:37</sys_created_on>
+        <sys_id>d800dfc2c304e21084a4f5fc05013141</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 17:06:37</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
