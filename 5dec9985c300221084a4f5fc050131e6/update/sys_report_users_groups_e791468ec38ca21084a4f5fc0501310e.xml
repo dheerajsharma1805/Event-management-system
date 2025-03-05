@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
         <group_id/>
-        <report_id display_value="">2791824ec38ca21084a4f5fc050131c9</report_id>
+        <report_id display_value="Real-time data on scheduled event">2791824ec38ca21084a4f5fc050131c9</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-04 11:24:08</sys_created_on>

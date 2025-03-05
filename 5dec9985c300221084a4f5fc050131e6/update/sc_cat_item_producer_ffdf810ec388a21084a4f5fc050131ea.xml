@@ -112,4 +112,15 @@
     </sc_cat_item_producer>
     <sys_translated_text action="delete_multiple" query="documentkey=ffdf810ec388a21084a4f5fc050131ea"/>
     <fx_price action="delete_multiple" query="id=ffdf810ec388a21084a4f5fc050131ea"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ffdf810ec388a21084a4f5fc050131ea</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 07:53:38</sys_created_on>
+        <sys_id>7b6111cec388a21084a4f5fc050131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:53:38</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

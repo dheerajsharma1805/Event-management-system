@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
     <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
         <name>content-type</name>
-        <rest_message_function display_value="">ca12e382c384e21084a4f5fc050131a0</rest_message_function>
+        <rest_message_function display_value="Create Event Schedule">ca12e382c384e21084a4f5fc050131a0</rest_message_function>
         <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-04 18:34:37</sys_created_on>

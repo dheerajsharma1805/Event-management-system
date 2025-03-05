@@ -6,7 +6,7 @@
         <css/>
         <display_field/>
         <field_list/>
-        <filter table="x_1605035_event_0_event_task">status=in progress<item display_value="In Progress" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="in progress"/>
+        <filter table="x_1605035_event_0_event_task">status=in progress<item display_value="in progress" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="in progress"/>
         </filter>
         <glyph/>
         <id/>
