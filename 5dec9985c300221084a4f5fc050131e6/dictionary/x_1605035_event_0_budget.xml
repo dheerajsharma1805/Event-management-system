@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="916e3d81c3c0221084a4f5fc0501318e" extends="task" label="Budget" max_length="40" name="x_1605035_event_0_budget" type="collection">
+        <element label="Total Budget" max_length="20" name="total_budget" type="currency"/>
+        <element audit="true" label="Amount Remaining" max_length="20" name="amount_remaining" type="currency"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
+                <element inactive_on_update="false" label="New" sequence="1" value="new"/>
+            </choice>
+        </element>
+        <element audit="true" label="Amount Spent" max_length="20" name="amount_spent" type="currency"/>
+        <element label="Event ID" max_length="32" name="event_id" reference="x_1605035_event_0_event_record" type="reference"/>
+    </element>
+</database>

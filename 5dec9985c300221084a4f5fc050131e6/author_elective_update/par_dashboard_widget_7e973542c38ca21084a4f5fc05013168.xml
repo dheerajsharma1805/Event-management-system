@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">13fc9d85c300221084a4f5fc0501312a</canvas>
+        <component display_value="Pie">96abe7e38d8790718022c5630a92176c</component>
+        <component_props>{"applyDateRange":false,"bareBorder":false,"colorConfig":{"type":"default"},"configVersion":"23.0.0-ci-SNAPSHOT","dataLabelsType":"value","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"filterQuery":"","id":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_1605035_event_0_event_record"}],"dateFormat":"default","emptyStateHeading":"No data available.","emptyStateIllustration":"add-data","enableCustomEmptyState":false,"enableDrilldown":true,"enableRealTimeUpdate":false,"filterConfigurations":"@state.parFilters","followFilters":true,"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","groupByField":"status","isChoice":true,"isPaBucket":false,"isRange":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true}],"headerTitle":"Number of events by Status","hideMatrixAggregate":false,"legendExpandToFit":false,"legendHorizontalAlignment":"center","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","id":"ZEdGaWJHVjRYekUyTURVd016VmZaWFpsYm5SZk1GOWxkbVZ1ZEY5eVpXTnZjbVF4TnpReE1EYzNNek0wTlRFeE56QTFPREl3TVM0eU56TTRNakV5TlRFMTE3NDEwNzczMzQ1MTI0MzMwMzg1MC45MDAwMzk0","numberFormat":{"customFormat":false},"durationFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"newReporting":false,"numberOfPeriods":2,"period":"M","registerOrientation":"horizontal","registerPosition":"bottom","showAbsolutePeriod":false,"showBorder":true,"showChange":false,"showChangeFrom":"previous","showChangePercentage":false,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showGapPercentage":false,"showHeader":true,"showHeaderSeparator":true,"showMaximumRange":false,"showMetricLabel":false,"showRegister":true,"showRegisterOnSameLine":false,"showRegisterPercentage":true,"showRegisterValue":true,"showSecondGroupAggregate":false,"showSparkline":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showTrend":false,"sortBy":"value","sortByOrder":"desc","telemetry":"null","truncationType":"start","wrapTitle":true}</component_props>
+        <h>12</h>
+        <name>Number of events by Status</name>
+        <stored_component display_value="Number of events by Status">607daa1fbafe61120da5004fcbf7dc79</stored_component>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 10:40:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7e973542c38ca21084a4f5fc05013168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Number of events by Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>par_dashboard_widget_7e973542c38ca21084a4f5fc05013168</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 10:40:24</sys_updated_on>
+        <visualization/>
+        <w>12</w>
+        <widget_props/>
+        <x>36</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</application>
+        <file_path/>
+        <instance_id>b08538632b53d2182fdcfcd2ce91bffe</instance_id>
+        <instance_name>dev293883</instance_name>
+        <name>par_dashboard_widget_7e973542c38ca21084a4f5fc05013168</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">13fc9d85c300221084a4f5fc0501312a</canvas><component display_value="Pie">96abe7e38d8790718022c5630a92176c</component><component_props>{"applyDateRange":false,"bareBorder":false,"colorConfig":{"type":"default"},"configVersion":"23.0.0-ci-SNAPSHOT","dataLabelsType":"value","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"filterQuery":"","id":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_1605035_event_0_event_record"}],"dateFormat":"default","emptyStateHeading":"No data available.","emptyStateIllustration":"add-data","enableCustomEmptyState":false,"enableDrilldown":true,"enableRealTimeUpdate":false,"filterConfigurations":"@state.parFilters","followFilters":true,"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","groupByField":"status","isChoice":true,"isPaBucket":false,"isRange":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true}],"headerTitle":"Number of events by Status","hideMatrixAggregate":false,"legendExpandToFit":false,"legendHorizontalAlignment":"center","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE2MDUwMzVfZXZlbnRfMF9ldmVudF9yZWNvcmQxNzQxMDc3MzM0NTExNzA1ODIwMS4yNzM4MjEyNTE1","id":"ZEdGaWJHVjRYekUyTURVd016VmZaWFpsYm5SZk1GOWxkbVZ1ZEY5eVpXTnZjbVF4TnpReE1EYzNNek0wTlRFeE56QTFPREl3TVM0eU56TTRNakV5TlRFMTE3NDEwNzczMzQ1MTI0MzMwMzg1MC45MDAwMzk0","numberFormat":{"customFormat":false},"durationFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"newReporting":false,"numberOfPeriods":2,"period":"M","registerOrientation":"horizontal","registerPosition":"bottom","showAbsolutePeriod":false,"showBorder":true,"showChange":false,"showChangeFrom":"previous","showChangePercentage":false,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showGapPercentage":false,"showHeader":true,"showHeaderSeparator":true,"showMaximumRange":false,"showMetricLabel":false,"showRegister":true,"showRegisterOnSameLine":false,"showRegisterPercentage":true,"showRegisterValue":true,"showSecondGroupAggregate":false,"showSparkline":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showTrend":false,"sortBy":"value","sortByOrder":"desc","telemetry":"null","truncationType":"start","wrapTitle":true}</component_props><h>12</h><name>Number of events by Status</name><stored_component display_value="Number of events by Status">607daa1fbafe61120da5004fcbf7dc79</stored_component><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-04 10:40:24</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7e973542c38ca21084a4f5fc05013168</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Number of events by Status</sys_name><sys_overrides/><sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope><sys_update_name>par_dashboard_widget_7e973542c38ca21084a4f5fc05013168</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-04 10:40:24</sys_updated_on><visualization/><w>12</w><widget_props/><x>36</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1710900977</payload_hash>
+        <record_name>Number of events by Status</record_name>
+        <reverted_from/>
+        <source>c1569d46c3c8a21084a4f5fc0501310b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 10:40:24</sys_created_on>
+        <sys_id>3e973542c38ca21084a4f5fc0501316a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19560be13f00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 10:40:24</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>32973542fd8ca21070728999a96c886a</update_guid>
+        <update_guid_history>32973542fd8ca21070728999a96c886a:-1710900977</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Number of events by Status">7c19b5c2c38ca21084a4f5fc050131cc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 10:46:49</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>4cb789feb2b2483db72329f36ef82a79</sys_id>
+        <sys_metadata>7e973542c38ca21084a4f5fc05013168</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Number of events by Status</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_scope_delete display_value="">05e84ddc08fa497c884ca43172306e61</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_7e973542c38ca21084a4f5fc05013168</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_7e973542c38ca21084a4f5fc05013168">3e973542c38ca21084a4f5fc0501316a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 10:46:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

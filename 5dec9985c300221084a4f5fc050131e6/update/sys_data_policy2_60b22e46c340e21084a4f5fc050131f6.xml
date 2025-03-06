@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions/>
+        <description/>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_1605035_event_0_event_record</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description>Contact no. is a mandatory field</short_description>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 13:49:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>60b22e46c340e21084a4f5fc050131f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Contact no. is a mandatory field</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_data_policy2_60b22e46c340e21084a4f5fc050131f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 13:49:36</sys_updated_on>
+    </sys_data_policy2>
+</record_update>

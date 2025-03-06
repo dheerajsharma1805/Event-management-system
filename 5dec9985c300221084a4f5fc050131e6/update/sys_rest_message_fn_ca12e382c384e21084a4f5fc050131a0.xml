@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Rohit Instance">8ae02f02c384e21084a4f5fc050131a4</basic_auth_profile>
+        <basic_auth_user/>
+        <content>{&#13;
+   eventName: ${eventName},&#13;
+   eventDate: ${eventDate},&#13;
+   location: ${location},&#13;
+   status: ${status},&#13;
+   vip: ${vip}&#13;
+}</content>
+        <function_name>Create Event Schedule</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Event Scheduled REST [ Create Event Schedule ]</qualified_name>
+        <rest_endpoint>/event</rest_endpoint>
+        <rest_message display_value="Event Scheduled REST">47175746c344e21084a4f5fc05013191</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-04 18:34:37</sys_created_on>
+        <sys_id>ca12e382c384e21084a4f5fc050131a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Event Schedule</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_rest_message_fn_ca12e382c384e21084a4f5fc050131a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 18:34:54</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

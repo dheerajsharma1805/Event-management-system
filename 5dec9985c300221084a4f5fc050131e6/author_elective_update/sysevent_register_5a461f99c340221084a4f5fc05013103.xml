@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="DELETE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_1605035_event_0.notify.manager.event.c</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>notify.manager.event.completed</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 09:39:15</sys_created_on>
+        <sys_id>5a461f99c340221084a4f5fc05013103</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1605035_event_0.notify.manager.event.c</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sysevent_register_5a461f99c340221084a4f5fc05013103</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 09:39:15</sys_updated_on>
+        <table>x_1605035_event_0_event_record</table>
+    </sysevent_register>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</application>
+        <file_path/>
+        <instance_id>b08538632b53d2182fdcfcd2ce91bffe</instance_id>
+        <instance_name>dev293883</instance_name>
+        <name>sysevent_register_5a461f99c340221084a4f5fc05013103</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><caller_access/><derived_priority>100</derived_priority><description/><event_name>x_1605035_event_0.notify.manager.event.c</event_name><fired_by/><priority>100</priority><queue/><suffix>notify.manager.event.completed</suffix><sys_class_name>sysevent_register</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-02 09:39:15</sys_created_on><sys_id>5a461f99c340221084a4f5fc05013103</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1605035_event_0.notify.manager.event.c</sys_name><sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope><sys_update_name>sysevent_register_5a461f99c340221084a4f5fc05013103</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-02 09:39:15</sys_updated_on><table>x_1605035_event_0_event_record</table></sysevent_register></record_update>]]></payload>
+        <payload_hash>-58085462</payload_hash>
+        <record_name>x_1605035_event_0.notify.manager.event.c</record_name>
+        <reverted_from/>
+        <source>c6b55b0dc348221084a4f5fc050131cd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 09:39:15</sys_created_on>
+        <sys_id>a3665f91c3c0221084a4f5fc0501316b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19556395edf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 09:39:15</sys_updated_on>
+        <type>Event Registration</type>
+        <update_guid>a7665f913cc022101dec45686617d66a</update_guid>
+        <update_guid_history>a7665f913cc022101dec45686617d66a:-58085462</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 09:40:42</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_register">sysevent_register</sys_db_object>
+        <sys_id>8c7c8565c03b48289467d8ddef953884</sys_id>
+        <sys_metadata>5a461f99c340221084a4f5fc05013103</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1605035_event_0.notify.manager.event.c</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_parent display_value="Event Record">71a92d85c340221084a4f5fc050131e2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_scope_delete display_value="">05e84ddc08fa497c884ca43172306e61</sys_scope_delete>
+        <sys_update_name>sysevent_register_5a461f99c340221084a4f5fc05013103</sys_update_name>
+        <sys_update_version display_value="sysevent_register_5a461f99c340221084a4f5fc05013103">a3665f91c3c0221084a4f5fc0501316b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 09:40:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

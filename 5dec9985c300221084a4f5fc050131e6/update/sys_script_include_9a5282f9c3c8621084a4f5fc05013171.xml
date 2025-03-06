@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1605035_event_0.BudgetApprovalUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BudgetApprovalUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BudgetApprovalUtils = Class.create();
+BudgetApprovalUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	approveBudget: function() {
+        var budgetID = this.getParameter('budget_id');
+
+        var budgetGR = new GlideRecord('x_1605035_event_0_budget'); 
+		budgetGR.addQuery('sys_id', budgetID);
+		budgetGR.query();
+        while (budgetGR.next()) {
+            budgetGR.setValue('status', 'approved');
+            budgetGR.update();
+
+			var managerEmail = gs.getUser().getEmail();
+			var notify = new GlideRecord('sys_email');
+            notify.initialize();
+            notify.setValue('type', 'email');
+            notify.setValue('subject', 'Budget Approved');
+            notify.setValue('body', 'The budget has been approved.');
+            notify.setValue('recipient', managerEmail); 
+            notify.insert();
+
+            return JSON.stringify({
+				message: 'success',
+				statusCode: 200
+			});
+        }
+
+        return {message: 'error'};
+    },
+
+    type: 'BudgetApprovalUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 16:52:40</sys_created_on>
+        <sys_id>9a5282f9c3c8621084a4f5fc05013171</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BudgetApprovalUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_script_include_9a5282f9c3c8621084a4f5fc05013171</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 16:52:40</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9a5282f9c3c8621084a4f5fc05013171</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-03 16:52:39</sys_created_on>
+        <sys_id>3d330679c3c8621084a4f5fc050131f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 16:52:39</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

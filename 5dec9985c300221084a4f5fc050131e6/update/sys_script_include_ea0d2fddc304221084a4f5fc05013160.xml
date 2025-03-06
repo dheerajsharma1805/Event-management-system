@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1605035_event_0.ClientEventUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ClientEventUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ClientEventUtils = Class.create();
+ClientEventUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    fetchEventDetails: function() {
+		var sysId = this.getParameter("sys_id");
+        var eventGr = new GlideRecord("x_1605035_event_0_event_record");
+        eventGr.addQuery("sys_id", sysId);
+        eventGr.query();
+        if (eventGr.next()) {
+            return JSON.stringify({
+                eventName: eventGr.getValue("event_name"),
+                eventDate: eventGr.getValue("event_date"),
+                location: eventGr.getValue("location"),
+                status: eventGr.getValue("status"),
+				isVip: eventGr.getValue("vip"),
+            });
+        }
+
+		return JSON.stringify ({
+			message: "No event Record Found"
+		});
+    },
+
+    type: 'ClientEventUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 11:27:39</sys_created_on>
+        <sys_id>ea0d2fddc304221084a4f5fc05013160</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ClientEventUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_script_include_ea0d2fddc304221084a4f5fc05013160</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 11:47:47</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ea0d2fddc304221084a4f5fc05013160</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 11:27:38</sys_created_on>
+        <sys_id>9f3f2f5dc304221084a4f5fc050131c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 11:27:38</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

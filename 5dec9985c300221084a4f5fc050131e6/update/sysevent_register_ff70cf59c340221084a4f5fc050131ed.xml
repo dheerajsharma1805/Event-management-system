@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_1605035_event_0.notify.coordinator.for</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>notify.coordinator.for.vip.event</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 08:05:58</sys_created_on>
+        <sys_id>ff70cf59c340221084a4f5fc050131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1605035_event_0.notify.coordinator.for</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sysevent_register_ff70cf59c340221084a4f5fc050131ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 08:05:58</sys_updated_on>
+        <table>x_1605035_event_0_event_record</table>
+    </sysevent_register>
+</record_update>

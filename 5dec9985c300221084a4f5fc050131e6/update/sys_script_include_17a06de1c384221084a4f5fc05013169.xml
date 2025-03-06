@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1605035_event_0.FeedbackUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FeedbackUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FeedbackUtils = Class.create();
+FeedbackUtils.prototype = {
+    initialize: function () {
+        this.feedbackTable = 'x_1605035_event_0_feedback';
+    },
+
+    getFeedbackDetailsById: function (feedbackId) {
+        var feedbackGR = new GlideRecordSecure(this.feedbackTable);
+        feedbackGR.addQuery('sys_id', feedbackId);
+        feedbackGR.query();
+        if (feedbackGR.next()) {
+            return this.mapFeedback(feedbackGR);
+        }
+        return null;
+    },
+
+    isFeedbackPositive: function (feedbackId) {
+        var feedbackGR = new GlideRecordSecure(this.feedbackTable);
+        feedbackGR.addQuery('sys_id', feedbackId);
+        feedbackGR.query();
+        if (feedbackGR.next()) {
+            var rating = feedbackGR.getValue('rating');
+            return rating == 'excellent' || rating == 'good';
+        }
+        return false;
+    },
+
+    getFeedbackByEvent: function (eventId) {
+        var feedbackList = [];
+        var feedbackGR = new GlideRecordSecure(this.feedbackTable);
+        feedbackGR.addQuery('event_id', eventId);
+        feedbackGR.query();
+        while (feedbackGR.next()) {
+            feedbackList.push(this.mapFeedback(feedbackGR));
+        }
+        return feedbackList;
+    },
+
+    mapFeedback: function(feedbackGR) {
+        return {
+            feedbackId: feedbackGR.getUniqueValue(),
+            eventId: feedbackGR.getValue('event_id'),
+            attendeeId: feedbackGR.getValue('attendee_id'),
+            rating: feedbackGR.getValue('rating'),
+            comment: feedbackGR.getValue('comment')
+        };
+    },
+
+    type: 'FeedbackUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 19:45:23</sys_created_on>
+        <sys_id>17a06de1c384221084a4f5fc05013169</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FeedbackUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1605035_event_0">5dec9985c300221084a4f5fc050131e6</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">5dec9985c300221084a4f5fc050131e6</sys_scope>
+        <sys_update_name>sys_script_include_17a06de1c384221084a4f5fc05013169</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-03 19:32:35</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>17a06de1c384221084a4f5fc05013169</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-02 19:45:23</sys_created_on>
+        <sys_id>de212de1c384221084a4f5fc0501312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-02 19:45:23</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
