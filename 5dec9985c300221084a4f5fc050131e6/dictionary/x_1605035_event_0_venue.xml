@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="bc695e05c344221084a4f5fc0501316d" extends="task" label="Venue" max_length="40" name="x_1605035_event_0_venue" type="collection">
         <element label="Venue Name" max_length="40" name="venue_name" type="string"/>
-        <element label="Event ID" max_length="32" name="event_id" reference="x_1605035_event_0_event_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Event Id" max_length="32" name="event_id" reference="x_1605035_event_0_event_record" type="reference"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
